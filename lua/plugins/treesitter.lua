@@ -1,13 +1,16 @@
 return {
-	{
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate',
-		config = function()
-			require'nvim-treesitter.configs'.setup {
-				ensure_installed = {"html", "lua", "rust", "yaml", "php", "blade"}, -- Instalar linguagens mantidas
-				highlight = { enable = true },    -- Ativar o destaque de sintaxe
-				indent = { enable = true },       -- Ativar indentação com treesitter
-			}
-		end
-	}
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = { "rust", "lua", "php", "blade", "html", "bash", "yaml" },
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        indent = { enable = true },
+      })
+    end,
+  },
 }

@@ -16,6 +16,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.opt.number = true
 vim.opt.hlsearch = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.autoindent = true
+vim.opt.cursorline = true
 
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
@@ -35,3 +39,17 @@ require("lazy").setup({
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
+-- Mason Setup
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "",
+            package_pending = "",
+            package_uninstalled = "",
+        },
+    }
+})
+require("mason-lspconfig").setup()
+
+vim.cmd("syntax enable")
+
