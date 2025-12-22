@@ -8,6 +8,7 @@ Repository for personal use to back up the nvim configuration, use at your own r
 
    
       mkdir -p ~/.config/nvim &&
-      git clone https://github.com/Matheus-git/nvim-plugins.git ~/.config/nvim
+      git clone https://github.com/Matheus-git/nvim-plugins.git ~/.config/nvim &&
+      sudo apt install ripgrep fd-find
    
  
