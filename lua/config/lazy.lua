@@ -56,17 +56,6 @@ require("lazy").setup({
   install = { colorscheme = { "onedark" } },
   -- automatically check for plugin updates
 })
--- Mason Setup
-require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "",
-            package_pending = "",
-            package_uninstalled = "",
-        },
-    }
-})
-require("mason-lspconfig").setup()
 
 vim.keymap.set("n", "<C-f>", function()
   vim.lsp.buf.format({ async = true })
